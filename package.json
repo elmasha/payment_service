@@ -28,9 +28,11 @@
         "express-session": "^1.17.2",
         "firebase": "^9.6.1",
         "firebase-admin": "^10.0.1",
-        "heroku": "^7.59.2",
-        "nodemon": "^2.0.15",
         "pm2": "^6.0.13",
         "request": "^2.88.2"
+    },
+    "devDependencies": {
+    "nodemon": "^2.0.15",
+    "heroku": "^7.59.2"
     }
 }
