@@ -2,7 +2,7 @@ events {}
 
 http {
   server {
-    listen ${PORT};
+    listen 8080;
 
     location /meatpro {
       proxy_pass http://127.0.0.1:30001;
