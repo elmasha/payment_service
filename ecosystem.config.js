@@ -1,26 +1,23 @@
 module.exports = {
   apps: [
     {
-      name: "meatpro",
-      script: "meatpro.js",
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      name: "yayalink",
+      script: "./app/yayalink.js",
       env: {
-        NODE_ENV: "production",
+        PORT: 3000
+      }
+    },
+    {
+      name: "meatpro",
+      script: "./app/meatpro.js",
+      env: {
         PORT: 3001
       }
     },
     {
-      name: "yayalink",
-      script: "yayalink.js",
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      env: {
-        NODE_ENV: "production",
-        PORT: 3000
-      }
+      name: "nginx",
+      script: "/usr/sbin/nginx",
+      args: ["-g", "daemon off;"]
     }
   ]
 };
