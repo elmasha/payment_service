@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const app = express();
 const cors = require("cors");
 const fs = require("firebase-admin");
-const fcm = require("fcm-notification");
 
 ///-----Port-----///
 const port = app.listen(process.env.PORT2 || 3001);
@@ -18,8 +17,6 @@ fs.initializeApp({
     credential: fs.credential.cert(serviceAccount),
 });
 
-const certPath = fs.credential.cert(serviceAccount);
-var FCM = new fcm(certPath);
 
 const db = fs.firestore();
 
