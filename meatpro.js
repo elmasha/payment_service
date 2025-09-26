@@ -12,7 +12,7 @@ const _urlencoded = express.urlencoded({ extended: false });
 app.use(cors());
 app.use(express.json());
 
-const serviceAccount = require("../meatproserviceAccount.js");
+const serviceAccount = require("./meatproserviceAccount.js");
 
 fs.initializeApp({
     credential: fs.credential.cert(serviceAccount),
