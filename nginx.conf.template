@@ -2,16 +2,7 @@ events {}
 
 http {
   server {
-    listen 8080;
-
-    location /meatpro {
-      proxy_pass http://127.0.0.1:30001;
-      proxy_http_version 1.1;
-      proxy_set_header Upgrade $http_upgrade;
-      proxy_set_header Connection "upgrade";
-      proxy_set_header Host $host;
-      proxy_cache_bypass $http_upgrade;
-    }
+    listen ${PORT};
 
     location /yayalink {
       proxy_pass http://127.0.0.1:3000;
@@ -21,5 +12,16 @@ http {
       proxy_set_header Host $host;
       proxy_cache_bypass $http_upgrade;
     }
+
+    location /meatpro {
+      proxy_pass http://127.0.0.1:3001;
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+      proxy_set_header Host $host;
+      proxy_cache_bypass $http_upgrade;
+    }
+
+    
   }
 }
