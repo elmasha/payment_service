@@ -2,12 +2,12 @@ module.exports = {
   apps: [
     {
       name: "meatpro",
-      script: "./app/meatpro.js",
+      script: "./meatpro.js",
       env: { PORT: 3000 }
     },
     {
       name: "yayalink",
-      script: "./app/yayalink.js",
+      script: "./yayalink.js",
       env: { PORT: 3001 }
     },
     {
