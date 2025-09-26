@@ -7,7 +7,7 @@ const fs = require("firebase-admin");
 const fcm = require("fcm-notification");
 
 ///-----Port-----///
-const port = app.listen(process.env.PORT || 5005);
+const port = app.listen(process.env.PORT2 || 3001);
 const _urlencoded = express.urlencoded({ extended: false });
 app.use(cors());
 app.use(express.json());

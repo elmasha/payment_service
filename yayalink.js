@@ -6,7 +6,7 @@ const cors = require("cors");
 const fs = require("firebase-admin");
 
 ///-----Port-----///
-const port = process.env.PORT || 4114;
+const port = process.env.PORT1 || 3000;
 const _urlencoded = express.urlencoded({ extended: false });
 app.use(cors());
 app.use(express.json());
