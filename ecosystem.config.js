@@ -3,12 +3,24 @@ module.exports = {
     {
       name: "meatpro",
       script: "meatpro.js",
-      env: { PORT: 3001 }
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      env: {
+        NODE_ENV: "production",
+        PORT: 3001
+      }
     },
     {
       name: "yayalink",
       script: "yayalink.js",
-      env: { PORT: 3000 }
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      env: {
+        NODE_ENV: "production",
+        PORT: 3000
+      }
     }
   ]
 };
