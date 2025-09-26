@@ -12,17 +12,19 @@ WORKDIR /app
 # Copy package.json and package-lock.json first for caching
 COPY package*.json ./
 
-# Install dependencies
+# Install dependencies (only production)
 RUN npm install --production
 
-# Copy rest of the app
+# Copy the rest of the app
 COPY . .
 
 # Copy nginx template
 COPY nginx.conf.template /etc/nginx/nginx.conf.template
 
-# Expose Railway PORT (Railway provides this)
+# Expose Railway's dynamic port
 EXPOSE 8080
 
-# Start both servers + nginx via PM2
-CMD sh -c "envsubst < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf && pm2-runtime ecosystem.config.js"
+# Start nginx in foreground + PM2 for Node apps
+CMD sh -c "envsubst < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf \
+    && nginx -g 'daemon off;' & \
+    pm2-runtime ecosystem.config.js"

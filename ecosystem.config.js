@@ -9,11 +9,6 @@ module.exports = {
       name: "yayalink",
       script: "yayalink.js",
       env: { PORT: 3000 }
-    },
-    {
-      name: "nginx",
-      script: "nginx",
-      interpreter: "none"
     }
   ]
 };
