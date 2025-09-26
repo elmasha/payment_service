@@ -2,8 +2,7 @@ events {}
 
 http {
   server {
-    # This will be replaced with the Railway-assigned port
-    listen ${PORT};
+    listen 8080;
 
     location /api {
       proxy_pass http://127.0.0.1:3000;

@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y nginx gettext-base
 RUN npm install -g pm2
 
 # Copy app
-#WORKDIR /app 
+WORKDIR /app 
 COPY . .
 
 # Copy nginx template
