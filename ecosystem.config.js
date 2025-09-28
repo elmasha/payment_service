@@ -12,5 +12,9 @@ module.exports = {
       name: "gateway",
       script: "gateway.js",
     },
+    {
+      name: "dukalink",
+      script: "dukalink.js",
+    },
   ],
 };
