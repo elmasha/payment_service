@@ -3,8 +3,9 @@
     "version": "1.0.0",
     "description": "Yaya job",
     "main": "server.js",
-    "scripts": {
-        "start": "concurrently \"node meatpro.js\" \"node yayalink.js\" \"node gateway.js\""
+    "scripts": {   
+     "dev": "concurrently \"node yayalink.js\" \"node meatpro.js\" \"node gateway.js\"",
+     "start": "pm2-runtime ecosystem.config.js"
     },
     "repository": {
         "type": "git",
