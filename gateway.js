@@ -42,7 +42,7 @@ app.use(
   })
 );
 
-// Proxy /dukalink → dukalink.js running on port 4002
+// Proxy /swiftgas → swiftgas.js running on port 4002
 app.use(
   "/swiftgas",
   createProxyMiddleware({
@@ -50,6 +50,17 @@ app.use(
     changeOrigin: true,
   })
 );
+
+
+// Proxy /contest → contest.js running on port 4002
+app.use(
+  "/contest",
+  createProxyMiddleware({
+    target: "http://localhost:3004",
+    changeOrigin: true,
+  })
+);
+
 
 
 app.listen(PORT, () => {

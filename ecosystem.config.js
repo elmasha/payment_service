@@ -30,5 +30,11 @@ module.exports = {
       node_args: "--trace-deprecation",
       watch: false
     },
+    {
+      name: "contest",
+      script: "contest.js",
+      node_args: "--trace-deprecation",
+      watch: false
+    },
   ],
 };
