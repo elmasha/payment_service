@@ -42,6 +42,15 @@ app.use(
   })
 );
 
+// Proxy /dukalink → dukalink.js running on port 4002
+app.use(
+  "/swiftgas",
+  createProxyMiddleware({
+    target: "http://localhost:3004",
+    changeOrigin: true,
+  })
+);
+
 
 app.listen(PORT, () => {
   console.log(`Gateway running on port ${PORT}`);

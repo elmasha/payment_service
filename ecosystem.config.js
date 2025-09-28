@@ -16,5 +16,9 @@ module.exports = {
       name: "dukalink",
       script: "dukalink.js",
     },
+     {
+      name: "swiftgas",
+      script: "swiftgas.js",
+    },
   ],
 };
