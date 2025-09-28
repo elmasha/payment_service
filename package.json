@@ -5,7 +5,7 @@
     "main": "server.js",
     "scripts": {   
      "dev": "concurrently \"node yayalink.js\" \"node meatpro.js\" \"node gateway.js\"",
-     "start": "pm2-runtime ecosystem.config.js"
+     "start": "pm2-runtime ecosystem.config.js --node-args='--trace-deprecation'"
     },
     "repository": {
         "type": "git",
