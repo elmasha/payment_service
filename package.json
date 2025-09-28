@@ -4,7 +4,7 @@
     "description": "Yaya job",
     "main": "server.js",
     "scripts": {   
-     "dev": "concurrently \"node yayalink.js\" \"node meatpro.js\" \"node gateway.js\"",
+     "dev": "concurrently \"node yayalink.js\" \"node meatpro.js\" \"node gateway.js\"   \"node dukalink.js\"",
      "start": "pm2-runtime ecosystem.config.js --node-args='--trace-deprecation'"
     },
     "repository": {
