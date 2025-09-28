@@ -2,7 +2,7 @@
     "name": "yayampesaapi",
     "version": "1.0.0",
     "description": "Yaya job",
-    "main": "",
+    "main": "server.js",
     "scripts": {
         "start": "pm2-runtime ecosystem.config.js"
     },

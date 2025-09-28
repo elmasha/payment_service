@@ -1,28 +1,21 @@
-FROM node:18
+FROM node:20
 
-# Install nginx and envsubst
-RUN apt-get update && apt-get install -y nginx gettext-base
+# Install nginx
+RUN apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
 
-# Install PM2 globally
-RUN npm install -g pm2
+WORKDIR /usr/src/app
 
-# Set working directory
-WORKDIR /app
-
-# Copy package.json first
 COPY package*.json ./
+RUN npm install pm2 -g && npm install
 
-# Install dependencies
-RUN npm install --production
-
-# Copy app files
 COPY . .
 
-# Copy nginx template
-COPY nginx.conf.template /etc/nginx/nginx.conf.template
+# Remove default nginx config and use template
+RUN rm /etc/nginx/sites-enabled/default
+COPY nginx.conf.template /etc/nginx/templates/default.conf.template
 
-# Expose Railway/Docker port
+# Railway sets PORT automatically
 EXPOSE 8080
+ENV PORT=8080
 
-# Start both apps + nginx
-CMD ["sh", "-c", "envsubst < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf && pm2-runtime ecosystem.config.js"]
+CMD ["pm2-runtime", "start", "ecosystem.config.js"]
