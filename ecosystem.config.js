@@ -1,6 +1,12 @@
 module.exports = {
   apps: [
     {
+      name: "gateway",
+      script: "gateway.js",
+      node_args: "--trace-deprecation",
+      watch: false
+    },
+    {
       name: "yayalink",
       script: "yayalink.js",
       node_args: "--trace-deprecation",
@@ -12,12 +18,7 @@ module.exports = {
       node_args: "--trace-deprecation",
       watch: false
     },
-    {
-      name: "gateway",
-      script: "gateway.js",
-      node_args: "--trace-deprecation",
-      watch: false
-    },
+    
     {
       name: "dukalink",
       script: "dukalink.js",
