@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 ///----FireStore ----//
-const serviceAccount = require("./yayaservicekey.js");
+const serviceAccount = require("./serviceAccountKeys/yayaservicekey.js");
 
 
 fs.initializeApp({
