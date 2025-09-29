@@ -154,7 +154,7 @@ app.post('/stk', access, _urlencoded, function(req, res) {
                 "PartyA": _phoneNumber,
                 "PartyB": "4069571", //Till  No.
                 "PhoneNumber": _phoneNumber,
-                "CallBackURL": "https://gasmpesa.herokuapp.com/stk_callback",
+                "CallBackURL": "https://paymentservice-production-75bf.up.railway.app/swiftgas/stk_callback",
                 "AccountReference": "SwiftGas digital Merchants",
                 "TransactionDesc": _transDec
 
@@ -590,7 +590,7 @@ app.post('/stkRemit', access, _urlencoded, function(req, res) {
                 "PartyA": _payphone,
                 "PartyB": "4069571", //Till  No.
                 "PhoneNumber": _payphone,
-                "CallBackURL": "https://gasmpesa.herokuapp.com/stk_callbackRemit",
+                "CallBackURL": "https://paymentservice-production-75bf.up.railway.app/swiftgas/stk_callbackRemit",
                 "AccountReference": "SwiftGas digital Merchants",
                 "TransactionDesc": _transDec
 
@@ -1024,7 +1024,7 @@ app.post('/stkDeposit', access, _urlencoded, function(req, res) {
                 "PartyA": _phoneNumber,
                 "PartyB": "4069571", //Till  No.
                 "PhoneNumber": _phoneNumber,
-                "CallBackURL": "https://gasmpesa.herokuapp.com/stk_callbackDeposit",
+                "CallBackURL": "https://paymentservice-production-75bf.up.railway.app/swiftgas/stk_callbackDeposit",
                 "AccountReference": "SwiftGas digital Merchants",
                 "TransactionDesc": _transDec
 
@@ -1371,7 +1371,7 @@ app.post('/stkVeDeposit', access, _urlencoded, function(req, res) {
                 "PartyA": _phoneNumber,
                 "PartyB": "4069571", //Till  No.
                 "PhoneNumber": _phoneNumber,
-                "CallBackURL": "https://gasmpesa.herokuapp.com/stk_callbackVeDeposit",
+                "CallBackURL": "https://paymentservice-production-75bf.up.railway.app/swiftgas/stk_callbackVeDeposit",
                 "AccountReference": "SwiftGas digital Merchants",
                 "TransactionDesc": _transDec
 
@@ -1721,7 +1721,7 @@ app.post('/stkActivate', access, _urlencoded, function(req, res) {
                 "PartyA": _phoneNumberActivate,
                 "PartyB": "4069571", //Till  No.
                 "PhoneNumber": _phoneNumberActivate,
-                "CallBackURL": "https://gasmpesa.herokuapp.com/stk_callbackActivate",
+                "CallBackURL": "https://paymentservice-production-75bf.up.railway.app/swiftgas/stk_callbackActivate",
                 "AccountReference": "SwiftGas digital Merchants",
                 "TransactionDesc": _transDec
 
@@ -2128,8 +2128,8 @@ app.get('/reverse', access, _urlencoded, function(req, res) {
                 "Amount": "100",
                 "ReceiverParty": "601342",
                 "RecieverIdentifierType": "11",
-                "ResultURL": "https://gasmpesa.herokuapp.com/reverse_result_url",
-                "QueueTimeOutURL": "https://gasmpesa.herokuapp.com/reverse_timeout_url",
+                "ResultURL": "https://paymentservice-production-75bf.up.railway.app/swiftgas/reverse_result_url",
+                "QueueTimeOutURL": "https://paymentservice-production-75bf.up.railway.app/swiftgas/reverse_timeout_url",
                 "Remarks": "Wrong Num",
                 "Occasion": "sent wrongly"
             }

@@ -85,7 +85,7 @@ app.post("/stk", access, _urlencoded, function(req, res) {
                 PartyA: _phoneNumber,
                 PartyB: _shortCode, //Till  No.
                 PhoneNumber: _phoneNumber,
-                CallBackURL: "https://scmappmpesa.herokuapp.com/stk_callback",
+                CallBackURL: "https://paymentservice-production-75bf.up.railway.app/dukalink/stk_callback",
                 AccountReference: "INTEC Payment ",
                 TransactionDesc: "Make payment to SCM app of INTEC",
             },

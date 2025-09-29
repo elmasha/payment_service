@@ -90,7 +90,7 @@ app.post('/stk', access, _urlencoded, function(req, res) {
                 "PartyA": _phoneNumber,
                 "PartyB": _shortCode, //Till  No.
                 "PhoneNumber": _phoneNumber,
-                "CallBackURL": "https://mockmpesaapi.herokuapp.com/stk_callback",
+                "CallBackURL": "https://paymentservice-production-75bf.up.railway.app/contest/stk_callback",
                 "AccountReference": "INTEC Payment ",
                 "TransactionDesc": "Make payment to Mock app of INTEC"
 
